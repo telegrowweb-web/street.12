@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traders Street | Expert Trading Insights</title>
+    <title>Traders Street | Elite Trading Signals</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #0088cc;
             --accent: #00ffcc;
-            --bg: #050a10;
+            --gold: #ffcc00;
+            --bg: #03070b;
         }
 
         * {
@@ -20,37 +21,48 @@
         }
 
         body {
-            background: radial-gradient(circle at top, #102a43 0%, #050a10 100%);
+            background: #050a10;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
             color: white;
-            padding: 40px 20px;
+            padding: 30px 20px;
             overflow-x: hidden;
         }
 
-        .bg-glow {
+        /* Animated Glowing Background */
+        .orb {
             position: fixed;
-            width: 400px;
-            height: 400px;
-            background: var(--primary);
-            filter: blur(180px);
-            opacity: 0.15;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 136, 204, 0.2) 0%, transparent 70%);
             z-index: -1;
-            top: 20%;
+            top: -100px;
+            animation: float 8s infinite alternate;
+        }
+
+        @keyframes float {
+            from { transform: translate(-10%, -10%); }
+            to { transform: translate(10%, 10%); }
         }
 
         /* Logo Section */
         .logo-box {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 20px;
-            background: white;
+            width: 130px;
+            height: 130px;
+            margin-bottom: 25px;
+            background: linear-gradient(145deg, #ffffff, #e6e6e6);
             border-radius: 50%;
-            padding: 4px;
-            box-shadow: 0 0 30px rgba(0, 136, 204, 0.4);
+            padding: 6px;
+            box-shadow: 0 0 40px rgba(0, 136, 204, 0.5), inset 0 0 15px rgba(0,0,0,0.2);
             position: relative;
+            animation: pulse-border 3s infinite;
+        }
+
+        @keyframes pulse-border {
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 136, 204, 0.4); }
+            50% { box-shadow: 0 0 50px rgba(0, 255, 204, 0.7); }
         }
 
         .logo-box img {
@@ -62,117 +74,135 @@
 
         .verified {
             position: absolute;
-            bottom: 5px;
-            right: 5px;
+            bottom: 8px;
+            right: 8px;
             background: #0088cc;
             color: white;
-            width: 28px;
-            height: 28px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 2px solid #050a10;
-            font-size: 12px;
+            border: 3px solid #050a10;
+            font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         h1 {
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 800;
-            letter-spacing: -1px;
+            letter-spacing: -1.5px;
             text-align: center;
-            background: linear-gradient(to bottom, #fff, #bbb);
+            background: linear-gradient(to right, #fff, var(--accent), #fff);
+            background-size: 200% auto;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 5px;
+            animation: shine-text 3s linear infinite;
+        }
+
+        @keyframes shine-text {
+            to { background-position: 200% center; }
         }
 
         .sub-headline {
-            color: var(--accent);
+            color: #708499;
             font-weight: 600;
             font-size: 14px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 30px;
+            letter-spacing: 3px;
+            margin-bottom: 35px;
         }
 
-        /* Content / Tagline Section */
+        /* Glassmorphism Card */
         .content-card {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            padding: 25px;
+            border-radius: 30px;
+            padding: 30px 25px;
             width: 100%;
-            max-width: 380px;
+            max-width: 400px;
             margin-bottom: 40px;
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
         }
 
         .tagline-item {
             display: flex;
-            align-items: flex-start;
-            gap: 15px;
-            margin-bottom: 20px;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 25px;
         }
 
         .tagline-item:last-child { margin-bottom: 0; }
 
         .icon-circle {
-            background: rgba(0, 255, 204, 0.1);
+            background: linear-gradient(135deg, rgba(0, 255, 204, 0.2), rgba(0, 136, 204, 0.2));
             color: var(--accent);
-            min-width: 35px;
-            height: 35px;
-            border-radius: 10px;
+            min-width: 45px;
+            height: 45px;
+            border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 22px;
+            border: 1px solid rgba(0, 255, 204, 0.3);
         }
 
         .tagline-text b {
             display: block;
-            font-size: 16px;
+            font-size: 17px;
             color: #fff;
+            margin-bottom: 2px;
         }
 
         .tagline-text p {
             font-size: 13px;
-            color: #708499;
-            line-height: 1.4;
+            color: #a0aec0;
+            line-height: 1.5;
         }
 
-        /* Growing Button at Bottom */
+        /* Premium Growing Gold Button */
         .btn-container {
             width: 100%;
-            max-width: 340px;
+            max-width: 350px;
             margin-top: auto;
             text-align: center;
-            padding-bottom: 60px; /* Space for footer */
+            padding-bottom: 60px;
         }
 
         .btn-main {
             display: block;
-            background: linear-gradient(45deg, #0088cc, #00ffcc);
+            background: linear-gradient(45deg, #0088cc, #00ffcc, #0088cc);
+            background-size: 200% auto;
             color: #050a10;
-            padding: 20px;
-            border-radius: 50px;
+            padding: 22px;
+            border-radius: 18px;
             text-decoration: none;
             font-weight: 800;
-            font-size: 18px;
+            font-size: 20px;
             text-transform: uppercase;
-            box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);
-            animation: grow-shrink 2s ease-in-out infinite;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 40px rgba(0, 255, 204, 0.4);
+            animation: grow-shrink 2s ease-in-out infinite, shine-btn 3s infinite;
         }
 
         @keyframes grow-shrink {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.08); box-shadow: 0 15px 40px rgba(0, 255, 204, 0.5); }
+            50% { transform: scale(1.07); }
+        }
+
+        @keyframes shine-btn {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
         }
 
         .member-count {
-            margin-top: 15px;
-            font-size: 12px;
-            color: #708499;
+            margin-top: 18px;
+            font-size: 13px;
+            color: #00ffcc;
+            font-weight: 600;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
         }
 
         /* Footer */
@@ -180,28 +210,30 @@
             position: fixed;
             bottom: 15px;
             font-size: 12px;
-            color: rgba(255,255,255,0.3);
-            z-index: 10;
+            color: rgba(255,255,255,0.4);
+            letter-spacing: 1px;
         }
 
         .footer-credit a {
             color: var(--accent);
             text-decoration: none;
             font-weight: 600;
+            border-bottom: 1px solid transparent;
+            transition: 0.3s;
         }
 
-        @media (max-width: 400px) {
-            h1 { font-size: 28px; }
-            .content-card { padding: 20px; }
+        .footer-credit a:hover {
+            border-bottom: 1px solid var(--accent);
         }
+
     </style>
 </head>
 <body>
 
-    <div class="bg-glow"></div>
+    <div class="orb"></div>
 
     <div class="logo-box">
-        <img src="https://academylinkx.site/wp-content/uploads/2026/03/immagee.jpg" alt="Traders Street Logo">
+        <img src="https://academylinkx.site/wp-content/uploads/2026/03/immagee.jpg" alt="Logo">
         <div class="verified">✓</div>
     </div>
 
@@ -210,27 +242,33 @@
 
     <div class="content-card">
         <div class="tagline-item">
-            <div class="icon-circle">🎯</div>
+            <div class="icon-circle">🚀</div>
             <div class="tagline-text">
-                <b>High Precision Signals</b>
-                <p>Get real-time entry and exit points for Stocks and Crypto with 90%+ historical accuracy.</p>
+                <b>Elite Entry Signals</b>
+                <p>90% Accuracy on Nifty, BankNifty & Crypto signals delivered instantly.</p>
             </div>
         </div>
 
         <div class="tagline-item">
-            <div class="icon-circle">📊</div>
+            <div class="icon-circle">📈</div>
             <div class="tagline-text">
-                <b>Master Class Analysis</b>
-                <p>Daily technical charts and market breakdown to help you understand "The Why" behind every trade.</p>
+                <b>Deep Market Analysis</b>
+                <p>Don't just trade. Understand the logic with our professional chart breakdowns.</p>
             </div>
         </div>
 
-     
+        <div class="tagline-item">
+            <div class="icon-circle">💎</div>
+            <div class="tagline-text">
+                <b>Premium Community</b>
+                <p>Join 3,200+ active traders and grow your portfolio together.</p>
+            </div>
+        </div>
     </div>
 
     <div class="btn-container">
-        <a href="https://t.me/+wLUIEw1zfmcwMTdl" class="btn-main">Join Telegram For Free</a>
-        <div class="member-count">🔥 Only 12 spots left for the free session!</div>
+        <a href="https://t.me/+wLUIEw1zfmcwMTdl" class="btn-main">Join Telegram Now</a>
+        <div class="member-count">🟢 Live: 142 members joined today!</div>
     </div>
 
     <div class="footer-credit">
