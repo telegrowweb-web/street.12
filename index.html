@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traders Street | Exclusive Access</title>
+    <title>Traders Street | Expert Trading Insights</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -24,35 +24,31 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             min-height: 100vh;
             color: white;
-            padding: 20px;
-            overflow: hidden;
+            padding: 40px 20px;
+            overflow-x: hidden;
         }
 
-        /* Animated Background Elements */
         .bg-glow {
             position: fixed;
-            width: 300px;
-            height: 300px;
+            width: 400px;
+            height: 400px;
             background: var(--primary);
-            filter: blur(150px);
-            opacity: 0.2;
+            filter: blur(180px);
+            opacity: 0.15;
             z-index: -1;
-            border-radius: 50%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top: 20%;
         }
 
+        /* Logo Section */
         .logo-box {
-            width: 140px;
-            height: 140px;
-            margin-bottom: 25px;
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
             background: white;
             border-radius: 50%;
-            padding: 5px;
+            padding: 4px;
             box-shadow: 0 0 30px rgba(0, 136, 204, 0.4);
             position: relative;
         }
@@ -64,107 +60,139 @@
             object-fit: cover;
         }
 
-        .verified-badge {
+        .verified {
             position: absolute;
             bottom: 5px;
             right: 5px;
             background: #0088cc;
             color: white;
-            width: 30px;
-            height: 30px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 3px solid #050a10;
-            font-size: 14px;
+            border: 2px solid #050a10;
+            font-size: 12px;
         }
 
         h1 {
             font-size: 32px;
             font-weight: 800;
             letter-spacing: -1px;
-            margin-bottom: 10px;
             text-align: center;
-            background: linear-gradient(to bottom, #fff, #999);
+            background: linear-gradient(to bottom, #fff, #bbb);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
         }
 
-        .stat-text {
-            color: #708499;
-            font-size: 16px;
+        .sub-headline {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        /* Content / Tagline Section */
+        .content-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            padding: 25px;
+            width: 100%;
+            max-width: 380px;
             margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .tagline-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .tagline-item:last-child { margin-bottom: 0; }
+
+        .icon-circle {
+            background: rgba(0, 255, 204, 0.1);
+            color: var(--accent);
+            min-width: 35px;
+            height: 35px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .tagline-text b {
+            display: block;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .tagline-text p {
+            font-size: 13px;
+            color: #708499;
+            line-height: 1.4;
+        }
+
+        /* Growing Button at Bottom */
+        .btn-container {
+            width: 100%;
+            max-width: 340px;
+            margin-top: auto;
             text-align: center;
+            padding-bottom: 60px; /* Space for footer */
         }
 
         .btn-main {
             display: block;
-            width: 100%;
-            max-width: 320px;
             background: linear-gradient(45deg, #0088cc, #00ffcc);
             color: #050a10;
-            padding: 22px;
+            padding: 20px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 800;
-            font-size: 20px;
-            text-align: center;
+            font-size: 18px;
             text-transform: uppercase;
             box-shadow: 0 10px 30px rgba(0, 255, 204, 0.3);
-            transition: all 0.3s ease;
-            /* Constant Zoom In/Out Animation */
-            animation: grow-and-shrink 1.8s ease-in-out infinite;
+            animation: grow-shrink 2s ease-in-out infinite;
         }
 
-        .btn-main:active {
-            transform: scale(0.95);
+        @keyframes grow-shrink {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); box-shadow: 0 15px 40px rgba(0, 255, 204, 0.5); }
         }
 
-        /* Growing & Shrinking (Zoom) Animation */
-        @keyframes grow-and-shrink {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 5px 15px rgba(0, 255, 204, 0.3);
-            }
-            50% {
-                transform: scale(1.1); /* Zoom In */
-                box-shadow: 0 15px 40px rgba(0, 255, 204, 0.6); /* Glow grows too */
-            }
-            100% {
-                transform: scale(1); /* Zoom Out */
-                box-shadow: 0 5px 15px rgba(0, 255, 204, 0.3);
-            }
+        .member-count {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #708499;
         }
 
-        .info-tags {
-            margin-top: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .tag {
-            font-size: 14px;
-            color: #00ffcc;
-            font-weight: 600;
-            background: rgba(0, 255, 204, 0.1);
-            padding: 5px 15px;
-            border-radius: 20px;
-        }
-
+        /* Footer */
         .footer-credit {
             position: fixed;
-            bottom: 20px;
-            font-size: 13px;
+            bottom: 15px;
+            font-size: 12px;
             color: rgba(255,255,255,0.3);
+            z-index: 10;
         }
 
         .footer-credit a {
-            color: #00ffcc;
+            color: var(--accent);
             text-decoration: none;
             font-weight: 600;
+        }
+
+        @media (max-width: 400px) {
+            h1 { font-size: 28px; }
+            .content-card { padding: 20px; }
         }
     </style>
 </head>
@@ -173,19 +201,42 @@
     <div class="bg-glow"></div>
 
     <div class="logo-box">
-        <img src="https://academylinkx.site/wp-content/uploads/2026/03/immagee.jpg" alt="Logo">
-        <div class="verified-badge">✓</div>
+        <img src="https://academylinkx.site/wp-content/uploads/2026/03/immagee.jpg" alt="Traders Street Logo">
+        <div class="verified">✓</div>
     </div>
 
     <h1>TRADERS STREET</h1>
-    <p class="stat-text">Join 3,236 Traders Winning Daily</p>
+    <div class="sub-headline">The Right Way of Trading</div>
 
-    <a href="https://t.me/+wLUIEw1zfmcwMTdl" class="btn-main">Join Channel Now</a>
+    <div class="content-card">
+        <div class="tagline-item">
+            <div class="icon-circle">🎯</div>
+            <div class="tagline-text">
+                <b>High Precision Signals</b>
+                <p>Get real-time entry and exit points for Stocks and Crypto with 90%+ historical accuracy.</p>
+            </div>
+        </div>
 
-    <div class="info-tags">
-        <span class="tag">⚡ Instant Signals</span>
-        <span class="tag">📈 90% Accuracy</span>
-        <p style="margin-top: 10px; font-size: 11px; color: #708499; text-transform: uppercase; letter-spacing: 1px;">Free Access - Limited Seats</p>
+        <div class="tagline-item">
+            <div class="icon-circle">📊</div>
+            <div class="tagline-text">
+                <b>Master Class Analysis</b>
+                <p>Daily technical charts and market breakdown to help you understand "The Why" behind every trade.</p>
+            </div>
+        </div>
+
+        <div class="tagline-item">
+            <div class="icon-circle">💰</div>
+            <div class="tagline-text">
+                <b>Consistent Daily Profits</b>
+                <p>Stop gambling and start trading with a proven system used by 3,200+ active members.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <a href="https://t.me/+wLUIEw1zfmcwMTdl" class="btn-main">Join Telegram For Free</a>
+        <div class="member-count">🔥 Only 12 spots left for the free session!</div>
     </div>
 
     <div class="footer-credit">
