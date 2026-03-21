@@ -1,286 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traders Street | Elite Trading Signals</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #0088cc;
-            --accent: #00ffcc;
-            --gold: #ffcc00;
-            --bg: #03070b;
-        }
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Traders Street | Elite Trading Signals | The Right Way of Trading</title>
+  <meta name="description" content="Join Traders Street on Telegram — 3,200+ active traders. Elite Entry Signals. 90% Accuracy on Nifty, BankNifty & Crypto. Join now free!"/>
+  <meta name="keywords" content="Traders Street, Trading Signals, Nifty, BankNifty, Crypto, Elite Trading, Telegram Trading"/>
+  <meta name="author" content="Traders Street"/>
+  <meta name="robots" content="index, follow"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://t.me/+wLUIEw1zfmcwMTdl"/>
+  <meta property="og:title" content="Traders Street – Elite Trading Signals"/>
+  <meta property="og:description" content="3,200+ active traders. 90% accuracy. Nifty, BankNifty & Crypto signals. Join free!"/>
+  <meta property="og:image" content="https://academylinkx.site/wp-content/uploads/2026/03/immagee.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://academylinkx.site/wp-content/uploads/2026/03/immagee.jpg"/>
+  <link rel="canonical" href="https://t.me/+wLUIEw1zfmcwMTdl"/>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4ff;
+      margin: 0;
+      padding: 15px;
+      text-align: center;
+      line-height: 1.5;
+      color: #222;
+    }
 
-        body {
-            background: #050a10;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            color: white;
-            padding: 30px 20px;
-            overflow-x: hidden;
-        }
+    .logo {
+      width: 95px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 12px;
+      transition: transform 0.3s ease;
+    }
+    .logo:hover { transform: scale(1.08); }
 
-        /* Animated Glowing Background */
-        .orb {
-            position: fixed;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(0, 136, 204, 0.2) 0%, transparent 70%);
-            z-index: -1;
-            top: -100px;
-            animation: float 8s infinite alternate;
-        }
+    h1 {
+      color: #0b5ed7;
+      font-size: 1.7rem;
+      margin: 8px 0;
+      line-height: 1.3;
+      font-weight: 700;
+    }
 
-        @keyframes float {
-            from { transform: translate(-10%, -10%); }
-            to { transform: translate(10%, 10%); }
-        }
+    .tagline {
+      font-weight: 600;
+      color: #444;
+      margin: 5px 0;
+      font-size: 1rem;
+    }
 
-        /* Logo Section */
-        .logo-box {
-            width: 130px;
-            height: 130px;
-            margin-bottom: 25px;
-            background: linear-gradient(145deg, #ffffff, #e6e6e6);
-            border-radius: 50%;
-            padding: 6px;
-            box-shadow: 0 0 40px rgba(0, 136, 204, 0.5), inset 0 0 15px rgba(0,0,0,0.2);
-            position: relative;
-            animation: pulse-border 3s infinite;
-        }
+    .highlight {
+      color: #28a745;
+      font-weight: bold;
+      font-size: 1.05rem;
+      margin: 6px 0;
+    }
 
-        @keyframes pulse-border {
-            0%, 100% { box-shadow: 0 0 20px rgba(0, 136, 204, 0.4); }
-            50% { box-shadow: 0 0 50px rgba(0, 255, 204, 0.7); }
-        }
+    .community {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin: 5px 0;
+      color: #555;
+    }
 
-        .logo-box img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      display: inline-block;
+      text-align: left;
+      margin: 14px 0;
+      max-width: 330px;
+    }
 
-        .verified {
-            position: absolute;
-            bottom: 8px;
-            right: 8px;
-            background: #0088cc;
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 3px solid #050a10;
-            font-size: 14px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
+    ul li {
+      margin: 6px 0;
+      font-size: 0.92rem;
+      color: #333;
+      line-height: 1.35;
+    }
 
-        h1 {
-            font-size: 36px;
-            font-weight: 800;
-            letter-spacing: -1.5px;
-            text-align: center;
-            background: linear-gradient(to right, #fff, var(--accent), #fff);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shine-text 3s linear infinite;
-        }
+    .timer {
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: red;
+      margin: 14px 0;
+    }
 
-        @keyframes shine-text {
-            to { background-position: 200% center; }
-        }
+    .join-btn {
+      background: #0b5ed7;
+      color: #fff;
+      border: none;
+      padding: 13px 28px;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin: 14px 0;
+      transition: background 0.3s ease;
+      animation: pulse 1.6s infinite;
+    }
+    @keyframes pulse {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+    .join-btn:hover { background: #084298; }
 
-        .sub-headline {
-            color: #708499;
-            font-weight: 600;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 35px;
-        }
+    .footer {
+      margin: 12px 0;
+      font-size: .88rem;
+      line-height: 1.4;
+    }
+    .footer b { font-weight: 700; }
+    .footer a { color: #0b5ed7; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
 
-        /* Glassmorphism Card */
-        .content-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 30px;
-            padding: 30px 25px;
-            width: 100%;
-            max-width: 400px;
-            margin-bottom: 40px;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-        }
+    .disclaimer {
+      margin-top: 18px;
+      font-size: 0.75rem;
+      color: #666;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.45;
+      padding: 0 10px;
+    }
 
-        .tagline-item {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-            margin-bottom: 25px;
-        }
+    .credit {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 14px;
+      color: #0b5ed7;
+      font-weight: 700;
+      opacity: 0.9;
+    }
+    .credit a {
+      color: #005ad7;
+      text-decoration: none;
+      font-weight: 800;
+    }
+    .credit a:hover { text-decoration: underline; }
 
-        .tagline-item:last-child { margin-bottom: 0; }
-
-        .icon-circle {
-            background: linear-gradient(135deg, rgba(0, 255, 204, 0.2), rgba(0, 136, 204, 0.2));
-            color: var(--accent);
-            min-width: 45px;
-            height: 45px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            border: 1px solid rgba(0, 255, 204, 0.3);
-        }
-
-        .tagline-text b {
-            display: block;
-            font-size: 17px;
-            color: #fff;
-            margin-bottom: 2px;
-        }
-
-        .tagline-text p {
-            font-size: 13px;
-            color: #a0aec0;
-            line-height: 1.5;
-        }
-
-        /* Premium Growing Gold Button */
-        .btn-container {
-            width: 100%;
-            max-width: 350px;
-            margin-top: auto;
-            text-align: center;
-            padding-bottom: 60px;
-        }
-
-        .btn-main {
-            display: block;
-            background: linear-gradient(45deg, #0088cc, #00ffcc, #0088cc);
-            background-size: 200% auto;
-            color: #050a10;
-            padding: 22px;
-            border-radius: 18px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 10px 40px rgba(0, 255, 204, 0.4);
-            animation: grow-shrink 2s ease-in-out infinite, shine-btn 3s infinite;
-        }
-
-        @keyframes grow-shrink {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.07); }
-        }
-
-        @keyframes shine-btn {
-            0% { background-position: 0% center; }
-            100% { background-position: 200% center; }
-        }
-
-        .member-count {
-            margin-top: 18px;
-            font-size: 13px;
-            color: #00ffcc;
-            font-weight: 600;
-            text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
-        }
-
-        /* Footer */
-        .footer-credit {
-            position: fixed;
-            bottom: 15px;
-            font-size: 12px;
-            color: rgba(255,255,255,0.4);
-            letter-spacing: 1px;
-        }
-
-        .footer-credit a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 1px solid transparent;
-            transition: 0.3s;
-        }
-
-        .footer-credit a:hover {
-            border-bottom: 1px solid var(--accent);
-        }
-
-    </style>
+    /* 📱 Responsive */
+    @media (max-width: 480px) {
+      h1 { font-size: 1.45rem; }
+      .highlight { font-size: 1rem; }
+      ul li { font-size: 0.87rem; }
+      .timer { font-size: 1.05rem; }
+      .join-btn { font-size: 0.95rem; padding: 11px 22px; }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="orb"></div>
+  <!-- Logo — linked -->
+  <a href="https://t.me/+wLUIEw1zfmcwMTdl" target="_blank" rel="noopener">
+    <img
+      src="https://academylinkx.site/wp-content/uploads/2026/03/immagee.jpg"
+      alt="Traders Street"
+      class="logo"
+      onerror="this.src='https://via.placeholder.com/95x95/0b5ed7/ffffff?text=TS'"
+    />
+  </a>
 
-    <div class="logo-box">
-        <img src="https://academylinkx.site/wp-content/uploads/2026/03/immagee.jpg" alt="Logo">
-        <div class="verified">✓</div>
-    </div>
+  <!-- Title — linked -->
+  <a href="https://t.me/+wLUIEw1zfmcwMTdl" target="_blank" rel="noopener" style="text-decoration:none;">
+    <h1>Traders Street 📈</h1>
+  </a>
 
-    <h1>TRADERS STREET</h1>
-    <div class="sub-headline">The Right Way of Trading</div>
+  <div class="tagline">The Right Way of Trading — Nifty · BankNifty · Crypto 🚀</div>
 
-    <div class="content-card">
-        <div class="tagline-item">
-            <div class="icon-circle">🚀</div>
-            <div class="tagline-text">
-                <b>Elite Entry Signals</b>
-                <p>90% Accuracy on Nifty, BankNifty & Crypto signals delivered instantly.</p>
-            </div>
-        </div>
-        <div class="tagline-item">
-            <div class="icon-circle">💎</div>
-            <div class="tagline-text">
-                <b>Premium Community</b>
-                <p>Join 3,200+ active traders and grow your portfolio together.</p>
-            </div>
-        </div>
-    </div>
+  <div class="community">Join 3,200+ active traders who are growing their portfolio 💎</div>
 
-    <div class="btn-container">
-        <a href="https://t.me/+wLUIEw1zfmcwMTdl" class="btn-main">Join Telegram Now</a>
-        <div class="member-count">🟢 Live: 142 members joined today!</div>
-    </div>
+  <div class="highlight">✅ 90% Accuracy Signals — Elite Entry Every Day!</div>
 
-    <div class="footer-credit">
-        ads managed by <a href="https://t.me/+TRlJl628l-FkMWE9" target="_blank">@Nexgroww_agency</a>
-    </div>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1505163051174367');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1505163051174367&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+  <ul>
+    <li>🚀 Elite Entry Signals — Nifty, BankNifty & Crypto</li>
+    <li>📊 90% Accuracy — Proven Track Record</li>
+    <li>💎 Premium Community — 3,200+ Active Traders</li>
+    <li>⚡ Instant Signals — Real Time Delivery</li>
+    <li>🏆 The Right Way of Trading — Join Today FREE!</li>
+  </ul>
+
+  <!-- Timer -->
+  <div class="timer" id="timer">⏳ 00 Min 05 Sec — Hurry Up!</div>
+
+  <!-- Main CTA — linked -->
+  <a href="https://t.me/+wLUIEw1zfmcwMTdl" target="_blank" rel="noopener" class="join-btn">
+    🚀 Join Traders Street — Free
+  </a>
+
+  <div class="footer">
+    <b>Telegram</b> use karte ho? Toh abhi
+    <a href="https://t.me/+wLUIEw1zfmcwMTdl" target="_blank" rel="noopener">
+      Join Karo Traders Street Channel
+    </a> 😍 — 100% Free · Elite Signals Daily!
+  </div>
+
+  <div class="disclaimer">
+    <b>Disclaimer:</b> We are not SEBI-registered advisors. All information shared is for educational purposes only. Please make your own investment decisions. Past performance does not guarantee future results. Trading involves risk.
+  </div>
+
+  <p class="credit">Ads by <a href="https://t.me/+TRlJl628l-FkMWE9" target="_blank" rel="noopener">@Nexgroww_agency</a></p>
+
+  <script>
+    const timerEl = document.getElementById("timer");
+    let seconds = 300;
+    const interval = setInterval(() => {
+      if (seconds <= 0) {
+        timerEl.innerHTML = "⏳ 00 Min 00 Sec — Offer Expired!";
+        clearInterval(interval);
+        return;
+      }
+      let min = String(Math.floor(seconds / 60)).padStart(2, '0');
+      let sec = String(seconds % 60).padStart(2, '0');
+      timerEl.innerHTML = `⏳ ${min} Min ${sec} Sec — Hurry Up!`;
+      seconds--;
+    }, 1000);
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1505163051174367');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1505163051174367&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
 </body>
 </html>
